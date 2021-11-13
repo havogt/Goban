@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:goban/widgets/stone.dart';
 
 class StoneThemes {
   StoneTheme blackStoneTheme;
   StoneTheme whiteStoneTheme;
+
+  Stone whiteStone(double size, bool last) {
+    return Stone(theme: whiteStoneTheme, size: size, last: last);
+  }
+
+  Stone blackStone(double size, bool last) {
+    return Stone(theme: blackStoneTheme, size: size, last: last);
+  }
 
   StoneThemes({this.blackStoneTheme, this.whiteStoneTheme}) {
     if (blackStoneTheme == null) {

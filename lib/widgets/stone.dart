@@ -25,13 +25,14 @@ class Stone extends StatelessWidget {
     var indicatorColor = _getInverseColor(theme.stoneColor);
 
     var stone = AnimatedContainer(
+      child: Icon(Icons.ac_unit, color: theme.stoneColor),
       duration: Duration(milliseconds: 500),
       width: size,
       height: size,
-      decoration: BoxDecoration(
-          border: Border.all(color: theme.borderColor, width: 2),
-          color: theme.stoneColor,
-          borderRadius: BorderRadius.circular(size)),
+      // decoration: BoxDecoration(
+      //     border: Border.all(color: theme.borderColor, width: 2),
+      //     // color: theme.stoneColor,
+      //     borderRadius: BorderRadius.circular(size)),
     );
     if (last) {
       return Stack(

@@ -47,19 +47,10 @@ class Intersection extends StatelessWidget {
 
     switch (player) {
       case Player.White:
-        stone = Stone(
-          key: UniqueKey(),
-          size: size,
-          theme: stoneThemes.whiteStoneTheme,
-          last: last,
-        );
+        stone = stoneThemes.whiteStone(size, last);
         break;
       case Player.Black:
-        stone = Stone(
-            key: UniqueKey(),
-            size: size,
-            theme: stoneThemes.blackStoneTheme,
-            last: last);
+        stone = stoneThemes.blackStone(size, last);
         break;
       case Player.Empty:
         stone = Container(
